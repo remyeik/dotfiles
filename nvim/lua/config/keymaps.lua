@@ -48,3 +48,6 @@ vim.keymap.set("v", "<C-l>", "$", { desc = "Jump to end of line" })
 
 -- <leader>fp for opening the Projects pane
 vim.keymap.set("n", "<leader>fp", ":lua Snacks.dashboard.pick('projects')<CR>", { desc = "Projects pane" })
+
+-- Cmd+a for select all
+vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select all", noremap = true })
