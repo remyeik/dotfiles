@@ -1,61 +1,61 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-        "source": "~/.config/fastfetch/peon.png",
-        "type": "kitty-direct",
-        "padding": {
-            "top": 1,
-            "left": 0,
-        },
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/peon.png",
+    "type": "kitty-direct",
+    "padding": {
+      "top": 1,
+      "left": 0,
     },
-    "modules": [
-        "break",
-        {
-            "type": "custom",
-            "format": " The Barracks",
-            "outputColor": "blue",
-        },
-        {
-            "type": "os",
-            "key": "\uf179 OS",
-            "format": "{sysname} {version}",
-            "keyColor": "red", // = color1
-        },
-        {
-            "type": "terminal",
-            "key": " Terminal",
-            "format": "{pretty-name} {version}",
-            "keyColor": "yellow",
-        },
-        {
-            "type": "memory",
-            "key": " Memory",
-            "format": "{used} / {total} ({percentage})",
-            "keyColor": "35",
-        },
-        {
-            "type": "disk",
-            "key": " Disk",
-            "format": "{size-used} / {size-total} ({size-percentage})",
-            "keyColor": "36",
-        },
-        {
-            "type": "battery",
-            "key": "󰂊 Battery",
-            "format": "{status} ({capacity}) [{cycle-count}]",
-            "keyColor": "red",
-        },
-        {
-            "type": "media",
-            "key": " Media",
-            "keyColor": "32",
-        },
-        {
-            "type": "datetime",
-            "key": " Time",
-            "format": "{weekday-short}, {day-pretty}.{month-name-short} {year} - {hour-pretty}:{minute-pretty}",
-            "keyColor": "34",
-        },
-        "break",
-    ],
+  },
+  "modules": [
+    "break",
+    {
+      "type": "custom",
+      "format": " The Barracks",
+      "outputColor": "dim_white",
+    },
+    {
+      "type": "os",
+      "key": "\uf179 OS",
+      "format": "{sysname} {version}",
+      "keyColor": "dim_white", // = color1
+    },
+    {
+      "type": "terminal",
+      "key": " Terminal",
+      "format": "{pretty-name} {version}",
+      "keyColor": "dim_white",
+    },
+    {
+      "type": "memory",
+      "key": " Memory",
+      "format": "{used} / {total} ({percentage})",
+      "keyColor": "dim_white",
+    },
+    {
+      "type": "disk",
+      "key": " Disk",
+      "format": "{size-used} / {size-total} ({size-percentage})",
+      "keyColor": "dim_white",
+    },
+    {
+      "type": "battery",
+      "key": "󰂊 Battery",
+      "format": "{status} ({capacity}) [{cycle-count}]",
+      "keyColor": "dim_white",
+    },
+    {
+      "type": "media",
+      "key": " Media",
+      "keyColor": "dim_white",
+    },
+    {
+      "type": "datetime",
+      "key": " Time",
+      "format": "{weekday-short}, {day-pretty}.{month-name-short} {year} - {hour-pretty}:{minute-pretty}",
+      "keyColor": "dim_white",
+    },
+    "break",
+  ],
 }

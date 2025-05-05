@@ -1,0 +1,24 @@
+# Put this in root and run brew bundle
+
+# command-line utilities
+
+bat
+btop
+fastfetch
+fzf
+git
+go
+lazygit
+neovim
+lazyvim
+nodenvm
+oh-my-posh
+zoxide
+zsh
+ghostty
+zed
+zen-browser
+font-maple-mono-nf
+pont-powerline-symbols
+font-symbols-only-nerd-font
+font-maple-mono-nf
