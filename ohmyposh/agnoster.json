@@ -1,84 +1,105 @@
 {
-  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "palette": {
-    "user_text": "#ffffff",
-    "path_text": "#f3f3f3",
-    "git_text": "#7fff00",
-    "git_modified": "#ff6347",
-    "error_text": "#ff6347"
-  },
-  "blocks": [
-    {
-      "alignment": "left",
-      "segments": [
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
         {
-          "template": "# ",
-          "type": "root",
-          "style": "powerline",
-          "properties": {
-            "display": "bold"
-          }
-        },
-        {
-          "template": "\ue5ff  ",
-          "type": "text",
-          "style": "powerline",
-          "foreground": "p:path_text",
-          "properties": {
-            "display": "bold"
-          }
-        },
-        {
-          "template": "{{ .Path }} ",
-          "type": "path",
-          "style": "powerline",
-          "foreground": "p:path_text",
-          "properties": {
-            "style": "agnoster_short",
-            "home_icon": "~",
-            "max_depth": 2,
-            "display": "bold"
-          }
-        },
-        {
-          "template": "{{ if ne .Code 0 }}[{{ reason .Code }}] {{ end }}",
-          "type": "status",
-          "style": "plain",
-          "foreground": "p:error_text",
-          "properties": {
-            "display": "bold"
-          }
-        },
-        {
-          "type": "git",
-          "style": "plain",
-          "template": "\ue0a0 {{ add .Working.Changed .Staging.Changed }}",
-          "foreground": "{{ if gt (add .Working.Changed .Staging.Changed) 0 }}p:git_modified{{ else }}p:git_text{{ end }}",
-          "properties": {
-            "fetch_status": true,
-            "display": "bold"
-          }
+            "alignment": "left",
+            "segments": [
+                {
+                    "background": "#ffe9aa",
+                    "foreground": "#100e23",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "powerline",
+                    "template": " \ue0b2 ",
+                    "type": "root"
+                },
+                {
+                    "background": "#CF7277",
+                    "foreground": "#100e23",
+                    "powerline_symbol": "\ue0b0",
+                    "leading_powerline_symbol": "\ue0b2",
+                    "style": "powerline",
+                    "template": " 󰞇  ",
+                    "type": "session"
+                },
+                {
+                    "background": "#6EB4BF",
+                    "foreground": "#100e23",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "powerline",
+                    "template": " {{ .Path }} ",
+                    "type": "path",
+                    "properties": {
+                        "style": "agnoster_short",
+                        "home_icon": "~",
+                        "max_depth": 2
+                    }
+                },
+                {
+                    "background": "#ff8080",
+                    "foreground": "#ffffff",
+                    "powerline_symbol": "\ue0b0",
+                    "style": "powerline",
+                    "template": " {{ reason .Code }} ",
+                    "type": "status"
+                },
+                {
+                  "type": "git",
+                  "style": "powerline",
+                  "powerline_symbol": "",
+                  "foreground": "#193549",
+                  "background": "#A1C181",
+                  "background_templates": [
+                    "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
+                    "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
+                    "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
+                    "{{ if gt .Behind 0 }}#B388FB{{ end }}"
+                  ],
+                  "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} ",
+                  "properties": {
+                    "fetch_status": true,
+                    "fetch_upstream_icon": true,
+                    "untracked_modes": {
+                      "/Users/user/Projects/oh-my-posh/": "no"
+                    },
+                    "source": "cli",
+                    "mapped_branches": {
+                      "feat/*": "🚀 ",
+                      "bug/*": "🐛 "
+                    }
+                  }
+                }
+            ],
+            "type": "prompt"
         }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
-          "template": "󰞇 ",
-          "type": "text",
-          "style": "plain",
-          "foreground": "p:path_text",
-          "properties": {
-            "display": "bold"
-          }
-        }
-      ],
-      "type": "prompt"
-    }
+    ],
+    "final_space": true,
+    "version": 3
+}
+
+
+{
+  "type": "git",
+  "style": "powerline",
+  "powerline_symbol": "",
+  "foreground": "#193549",
+  "background": "#ffeb3b",
+  "background_templates": [
+    "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
+    "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
+    "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
+    "{{ if gt .Behind 0 }}#B388FB{{ end }}"
   ],
-  "final_space": true,
-  "version": 3
+  "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+  "properties": {
+    "fetch_status": true,
+    "fetch_upstream_icon": true,
+    "untracked_modes": {
+      "/Users/user/Projects/oh-my-posh/": "no"
+    },
+    "source": "cli",
+    "mapped_branches": {
+      "feat/*": "🚀 ",
+      "bug/*": "🐛 "
+    }
+  }
 }

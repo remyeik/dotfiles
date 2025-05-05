@@ -1,0 +1,85 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "user_text": "#ffffff",
+    "path_text": "#f3f3f3",
+    "green_icons": "#98C379",
+    "git_text": "#7fff00",
+    "git_modified": "#ff6347",
+    "error_text": "#ff6347"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "template": "# ",
+          "type": "root",
+          "style": "powerline",
+          "properties": {
+            "display": "bold"
+          }
+        },
+        {
+          "template": "\ue5ff  ",
+          "type": "text",
+          "style": "powerline",
+          "foreground": "p:green_icons",
+          "properties": {
+            "display": "bold"
+          }
+        },
+        {
+          "template": "{{ .Path }} ",
+          "type": "path",
+          "style": "powerline",
+          "foreground": "p:path_text",
+          "properties": {
+            "style": "agnoster_short",
+            "home_icon": "~",
+            "max_depth": 2,
+            "display": "bold"
+          }
+        },
+        {
+          "template": "{{ if ne .Code 0 }}[{{ reason .Code }}] {{ end }}",
+          "type": "status",
+          "style": "plain",
+          "foreground": "p:error_text",
+          "properties": {
+            "display": "bold"
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "template": "{{ if gt (add .Working.Changed .Staging.Changed) 0 }}  {{ end }}",
+          "foreground": "p:green_icons",
+          "properties": {
+            "fetch_status": true,
+            "display": "bold"
+          }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "template": "  󰞇 ",
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:green_icons",
+          "properties": {
+            "display": "bold"
+          }
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 3
+}
