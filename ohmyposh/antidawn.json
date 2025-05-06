@@ -53,7 +53,8 @@
         {
           "type": "git",
           "style": "plain",
-          "template": "{{ if gt (add .Working.Changed .Staging.Changed) 0 }}  {{ end }}",
+          "template": "{{ if gt (add .Working.Changed .Staging.Changed) 0 }}\u001b[31m \u001b[0m{{ else }}\u001b[32m\u001b[0m{{ end }}",
+
           "foreground": "p:green_icons",
           "properties": {
             "fetch_status": true,
