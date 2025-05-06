@@ -14,13 +14,43 @@
       "outputColor": "green",
     },
     {
+      "type": "os",
+      "key": "\uf179 OS",
+      "format": "{sysname} {version}",
+      "keyColor": "green", // = color1
+    },
+    {
+      "type": "terminal",
+      "key": " Terminal",
+      "format": "{pretty-name} {version}",
+      "keyColor": "green",
+    },
+    {
+      "type": "memory",
+      "key": " Memory",
+      "format": "{used} / {total} ({percentage})",
+      "keyColor": "green",
+    },
+    {
+      "type": "disk",
+      "key": " Disk",
+      "format": "{size-used} / {size-total} ({size-percentage})",
+      "keyColor": "green",
+    },
+    {
+      "type": "battery",
+      "key": "󰂊 Battery",
+      "format": "{status} ({capacity}) [{cycle-count}]",
+      "keyColor": "green",
+    },
+    {
       "type": "media",
       "key": " Media",
       "keyColor": "green",
     },
     {
       "type": "datetime",
-      "key": " ",
+      "key": " Time",
       "format": "{weekday-short}, {day-pretty}.{month-name-short} {year} - {hour-pretty}:{minute-pretty}",
       "keyColor": "green",
     },
