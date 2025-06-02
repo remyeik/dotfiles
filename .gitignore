@@ -1,0 +1,10 @@
+# Ignore these folders
+btop/
+configstore/
+gh/
+github-copilot/
+gtk-3.0/
+jj/
+raycast/
+vivaldi/
+
