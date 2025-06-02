@@ -27,7 +27,7 @@
         "edit_prediction_provider": "zed"
     },
     // The name of a font to use for rendering text in the editor
-    "buffer_font_family": "Zed Plex Mono",
+    "buffer_font_family": "Maple Mono NF",
     // Set the buffer text's font fallbacks, this will be merged with
     // the platform's default fallbacks.
     "buffer_font_fallbacks": null,
@@ -53,7 +53,7 @@
     "buffer_line_height": "comfortable",
     // The name of a font to use for rendering text in the UI
     // You can set this to ".SystemUIFont" to use the system font
-    "ui_font_family": "Zed Plex Sans",
+    "ui_font_family": "Maple Mono NF",
     // Set the UI's font fallbacks, this will be merged with the platform's
     // default font fallbacks.
     "ui_font_fallbacks": null,
@@ -89,7 +89,7 @@
     // "cmd" and "ctrl") are supported.
     "multi_cursor_modifier": "alt",
     // Whether to enable vim modes and key bindings.
-    "vim_mode": true,
+    "vim_mode": false,
     // Whether to show the informational hover box when moving the mouse
     // over symbols in the editor.
     "hover_popover_enabled": true,

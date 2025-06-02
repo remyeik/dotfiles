@@ -1,0 +1,15 @@
+[user]
+name = "REMY EIK"
+email = "remyeik@icloud.com"
+
+[ui]
+# Possible values: "curved" (default), "square", "ascii", "ascii-large"
+graph.style = "square"
+log-word-wrap = true
+
+# Disable all pagination, equivalent to using --no-pager
+paginate = "never"
+
+
+[colors]
+rest = "white"
