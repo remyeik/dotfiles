@@ -51,3 +51,6 @@ vim.keymap.set("n", "<leader>fp", ":lua Snacks.dashboard.pick('projects')<CR>", 
 
 -- Cmd+a for select all
 vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select all", noremap = true })
+
+-- Better paste handling - removing the black hole register when pasting.
+vim.keymap.set("x", "p", [["_dP]])

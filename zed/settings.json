@@ -89,7 +89,7 @@
     // "cmd" and "ctrl") are supported.
     "multi_cursor_modifier": "alt",
     // Whether to enable vim modes and key bindings.
-    "vim_mode": false,
+    "vim_mode": true,
     // Whether to show the informational hover box when moving the mouse
     // over symbols in the editor.
     "hover_popover_enabled": true,
@@ -216,11 +216,11 @@
     // Toolbar related settings
     "toolbar": {
         // Whether to show breadcrumbs.
-        "breadcrumbs": false,
+        "breadcrumbs": true,
         // Whether to show quick action buttons.
         "quick_actions": false,
         // Whether to show the Selections menu in the editor toolbar
-        "selections_menu": true
+        "selections_menu": false
     },
     // Scrollbar related settings
     "scrollbar": {
@@ -297,7 +297,7 @@
     // Scroll sensitivity multiplier. This multiplier is applied
     // to both the horizontal and vertical delta values while scrolling.
     "scroll_sensitivity": 1.0,
-    "relative_line_numbers": false,
+    "relative_line_numbers": true,
     // If 'search_wrap' is disabled, search result do not wrap around the end of the file.
     "search_wrap": true,
     // Search options to enable by default when opening new project and buffer searches.
