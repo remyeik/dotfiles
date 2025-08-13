@@ -314,10 +314,8 @@ return {
           -- stylua: ignore
           ---@type snacks.dashboard.Item[]
           keys = {
+            { icon = "󰈔", key = "n", desc = "New File", action = ":enew" },
             { icon = " ", key = "p", desc = "Projects", action = ":lua Snacks.dashboard.pick('projects')" },
-            { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-            { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-            { icon = " ", key = "s", desc = "Restore Session", section = "session" },
           },
         },
       },
