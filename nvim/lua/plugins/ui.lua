@@ -83,17 +83,47 @@ return {
 
       vim.o.laststatus = vim.g.lualine_laststatus
 
+      -- Bubbles config for lualine (from the GitHub example)
+      local colors = {
+        blue = "#80a0ff",
+        cyan = "#79dac8",
+        black = "#080808",
+        white = "#c6c6c6",
+        red = "#ff5189",
+        violet = "#d183e8",
+        grey = "#303030",
+      }
+
+      local bubbles_theme = {
+        normal = {
+          a = { fg = colors.black, bg = colors.violet },
+          b = { fg = colors.white, bg = colors.grey },
+          c = { fg = colors.white },
+        },
+        insert = { a = { fg = colors.black, bg = colors.blue } },
+        visual = { a = { fg = colors.black, bg = colors.cyan } },
+        replace = { a = { fg = colors.black, bg = colors.red } },
+        inactive = {
+          a = { fg = colors.white, bg = colors.black },
+          b = { fg = colors.white, bg = colors.black },
+          c = { fg = colors.white },
+        },
+      }
+
       local opts = {
         options = {
-          theme = "auto",
+          theme = bubbles_theme,
+          component_separators = "",
+          section_separators = { left = "", right = "" },
           globalstatus = vim.o.laststatus == 3,
           disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
         },
         sections = {
-          lualine_a = { "mode" },
-          lualine_b = { "branch" },
-
+          lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
+          lualine_b = { "filename", "branch" },
           lualine_c = {
+            "%=", --[[ add your center components here in place of this comment ]]
+            -- Add some of your LazyVim components here if needed
             LazyVim.lualine.root_dir(),
             {
               "diagnostics",
@@ -104,35 +134,22 @@ return {
                 hint = icons.diagnostics.Hint,
               },
             },
-            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-            { LazyVim.lualine.pretty_path() },
           },
           lualine_x = {
+            -- Keep some important LazyVim components
             Snacks.profiler.status(),
-            -- stylua: ignore
-            {
-              function() return require("noice").api.status.command.get() end,
-              cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-              color = function() return { fg = Snacks.util.color("Statement") } end,
-            },
-            -- stylua: ignore
-            {
-              function() return require("noice").api.status.mode.get() end,
-              cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-              color = function() return { fg = Snacks.util.color("Constant") } end,
-            },
-            -- stylua: ignore
-            {
-              function() return "  " .. require("dap").status() end,
-              cond = function() return package.loaded["dap"] and require("dap").status() ~= "" end,
-              color = function() return { fg = Snacks.util.color("Debug") } end,
-            },
-            -- stylua: ignore
-            {
-              require("lazy.status").updates,
-              cond = require("lazy.status").has_updates,
-              color = function() return { fg = Snacks.util.color("Special") } end,
-            },
+          -- stylua: ignore
+          {
+            function() return require("noice").api.status.command.get() end,
+            cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
+            color = function() return { fg = Snacks.util.color("Statement") } end,
+          },
+          -- stylua: ignore
+          {
+            require("lazy.status").updates,
+            cond = require("lazy.status").has_updates,
+            color = function() return { fg = Snacks.util.color("Special") } end,
+          },
             {
               "diff",
               symbols = {
@@ -152,16 +169,20 @@ return {
               end,
             },
           },
-          lualine_y = {
-            { "progress", separator = " ", padding = { left = 1, right = 0 } },
-            { "location", padding = { left = 0, right = 1 } },
-          },
+          lualine_y = { "filetype", "progress" },
           lualine_z = {
-            function()
-              return " " .. os.date("%R")
-            end,
+            { "location", separator = { right = "" }, left_padding = 2 },
           },
         },
+        inactive_sections = {
+          lualine_a = { "filename" },
+          lualine_b = {},
+          lualine_c = {},
+          lualine_x = {},
+          lualine_y = {},
+          lualine_z = { "location" },
+        },
+        tabline = {},
         extensions = { "neo-tree", "lazy", "fzf" },
       }
 
@@ -188,7 +209,6 @@ return {
       return opts
     end,
   },
-
   -- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
   {
     "folke/noice.nvim",
