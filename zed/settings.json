@@ -13,8 +13,8 @@
     "experimental.theme_overrides": {
         "renamed.background": "#FFFFFF20",
         "search.match_background": "#FFFFFF20",
-        "ghost_element.background": "#00000010",
-        "ghost_element.hover": "#00000099",
+        "ghost_element.background": "#00000000",
+        "ghost_element.hover": "#00000010",
         "background.appearance": "blurred",
         "background": "#000000CC",
         "editor.background": "#00000010",
@@ -35,17 +35,8 @@
         "scrollbar.thumb.hover.background": "#00000000",
         "scrollbar.thumb.active.background": "#00000000",
         "scrollbar.thumb.border": "#FFFFFF90",
-        "editor.line_highlight": "#00000000",
-        "editor.active_line.background": "#00000000",
-        "editor.selection.background": "#00000000",
-        "editor.selection.foreground": "#00000000",
-        "editor.selection.border": "#00000000",
-        "editor.selection.inactive.foreground": "#00000000",
-        "editor.selection.inactive.border": "#00000000",
-        "editor.selection.active.background": "#00000000",
-        "editor.selection.active.foreground": "#00000000",
-        "editor.selection.active.border": "#00000000",
-        "editor.selection.inactive.background": "#00000000"
+        "editor.selection.background": "#FFFFFF",
+        "editor.selection.foreground": "#000000"
     },
     // The name of a base set of key bindings to use.
     // This setting can take four values, each named after another
@@ -268,15 +259,15 @@
         //    "never"
         "show": "auto",
         // Whether to show cursor positions in the scrollbar.
-        "cursors": true,
+        "cursors": false,
         // Whether to show git diff indicators in the scrollbar.
-        "git_diff": true,
+        "git_diff": false,
         // Whether to show buffer search results in the scrollbar.
         "search_results": true,
         // Whether to show selected symbol occurrences in the scrollbar.
-        "selected_symbol": true,
+        "selected_symbol": false,
         // Whether to show diagnostic indicators in the scrollbar.
-        "diagnostics": "all"
+        "diagnostics": "none"
     },
     // Enable middle-click paste on Linux.
     "middle_click_paste": true,
@@ -351,7 +342,7 @@
     // Inlay hint related settings
     "inlay_hints": {
         // Global switch to toggle hints on and off, switched off by default.
-        "enabled": false,
+        "enabled": true,
         // Toggle certain types of hints on and off, all switched on by default.
         "show_type_hints": true,
         "show_parameter_hints": true,
@@ -360,7 +351,7 @@
         // Whether to show a background for inlay hints.
         //
         // If set to `true`, the background will use the `hint.background` color from the current theme.
-        "show_background": false,
+        "show_background": true,
         // Time to wait after editing the buffer, before requesting the hints,
         // set to 0 to disable debouncing.
         "edit_debounce_ms": 700,
