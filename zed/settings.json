@@ -35,8 +35,15 @@
         "scrollbar.thumb.hover.background": "#00000000",
         "scrollbar.thumb.active.background": "#00000000",
         "scrollbar.thumb.border": "#FFFFFF90",
-        "editor.selection.background": "#FFFFFF",
-        "editor.selection.foreground": "#000000"
+        "editor.selection.background": "#00000000",
+        "editor.selection.foreground": "#00000000",
+        "editor.selection.border": "#00000000",
+        "editor.selection.inactive.foreground": "#00000000",
+        "editor.selection.inactive.border": "#00000000",
+        "editor.selection.active.background": "#00000000",
+        "editor.selection.active.foreground": "#0000000",
+        "editor.selection.active.border": "#00000000",
+        "editor.selection.inactive.background": "#00000000"
     },
     // The name of a base set of key bindings to use.
     // This setting can take four values, each named after another
@@ -52,7 +59,7 @@
     // Features that can be globally enabled or disabled
     "features": {
         // Which inline completion provider to use.
-        "edit_prediction_provider": "zed"
+        "edit_prediction_provider": "copilot"
     },
     // The name of a font to use for rendering text in the editor
     "buffer_font_family": "Maple Mono NF",
