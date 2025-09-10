@@ -398,7 +398,7 @@
     },
     "outline_panel": {
         // Whether to show the outline panel button in the status bar
-        "button": true,
+        "button": false,
         // Default width of the outline panel.
         "default_width": 300,
         // Where to dock the outline panel. Can be 'left' or 'right'.
@@ -421,7 +421,7 @@
     },
     "collaboration_panel": {
         // Whether to show the collaboration panel button in the status bar.
-        "button": true,
+        "button": false,
         // Where to dock the collaboration panel. Can be 'left' or 'right'.
         "dock": "left",
         // Default width of the collaboration panel.
@@ -429,7 +429,7 @@
     },
     "chat_panel": {
         // Whether to show the chat panel button in the status bar.
-        "button": "always",
+        "button": "never",
         // Where to the chat panel. Can be 'left' or 'right'.
         "dock": "right",
         // Default width of the chat panel.
@@ -442,7 +442,7 @@
     },
     "notification_panel": {
         // Whether to show the notification panel button in the status bar.
-        "button": true,
+        "button": false,
         // Where to dock the notification panel. Can be 'left' or 'right'.
         "dock": "right",
         // Default width of the notification panel.
@@ -592,9 +592,9 @@
     // Control what info is collected by Zed.
     "telemetry": {
         // Send debug info like crash reports.
-        "diagnostics": true,
+        "diagnostics": false,
         // Send anonymized usage data like what languages you're using Zed with.
-        "metrics": true
+        "metrics": false
     },
     // Automatically update Zed. This setting may be ignored on Linux if
     // installed through a package manager.
@@ -741,7 +741,7 @@
         "line_height": "standard",
         "font_size": 14,
         "font_weight": 600,
-        "font_family": "JetBrainsMono Nerd Font",
+        "font_family": "Maple Mono NF",
         // Activate the python virtual environment, if one is found, in the
         // terminal's working directory (as resolved by the working_directory
         // setting). Set this to "off" to disable this behavior.
