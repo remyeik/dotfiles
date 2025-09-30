@@ -1,0 +1,128 @@
+return {
+  "loctvl842/monokai-pro.nvim",
+  name = "monokai-pro",
+  lazy = false, -- Load immediately (ADD THIS LINE)
+  priority = 1000, -- Load before other plugins (ADD THIS LINE)
+  config = function()
+    require("monokai-pro").setup({
+      transparent_background = true, -- Enable transparency
+      terminal_colors = true,
+      devicons = true, -- highlight the icons of `nvim-web-devicons`
+      styles = {
+        comment = { italic = true },
+        keyword = { italic = true }, -- any other keyword
+        type = { italic = true }, -- (preferred) int, long, char, etc
+        storageclass = { italic = true }, -- static, register, volatile, etc
+        structure = { italic = true }, -- struct, union, enum, etc
+        parameter = { italic = true }, -- parameter pass in function
+        annotation = { italic = true },
+        tag_attribute = { italic = true }, -- attribute of tag in reactjs
+      },
+      filter = "machine", -- Changed from "pro" to "machine"
+      -- Enable this will disable filter option
+      day_night = {
+        enable = false, -- turn off by default
+        day_filter = "machine", -- Also update this if you want to use day_night
+        night_filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
+      },
+      inc_search = "background", -- underline | background
+      background_clear = {
+        "float_win",
+        "toggleterm",
+        "telescope",
+        "which-key",
+        "renamer",
+        "notify",
+        "nvim-tree",
+        "neo-tree",
+        -- "bufferline", -- better used if background of `neo-tree` or `nvim-tree` is cleared
+      }, -- "float_win", "toggleterm", "telescope", "which-key", "renamer", "neo-tree", "nvim-tree", "bufferline"
+      plugins = {
+        bufferline = {
+          underline_selected = false,
+          underline_visible = false,
+        },
+        indent_blankline = {
+          context_highlight = "default", -- default | pro
+          context_start_underline = false,
+        },
+      },
+      -- Custom transparency highlights
+      override = function(c)
+        return {
+          -- Basic transparency
+          Normal = { bg = c.base.none },
+          NormalNC = { bg = c.base.none },
+          NormalFloat = { bg = c.base.none },
+          SignColumn = { bg = c.base.none },
+          StatusLine = { bg = c.base.none },
+          StatusLineNC = { bg = c.base.none },
+          WinSeparator = { bg = c.base.none },
+          WinBar = { bg = c.base.none },
+          WinBarNC = { bg = c.base.none },
+          CursorLine = { bg = c.base.none },
+          CursorLineNr = { bg = c.base.none },
+          LineNr = { bg = c.base.none },
+
+          -- Telescope transparency
+          TelescopeNormal = { bg = c.base.none },
+          TelescopeBorder = { bg = c.base.none },
+          TelescopePromptNormal = { bg = c.base.none },
+          TelescopeResultsNormal = { bg = c.base.none },
+          TelescopePreviewNormal = { bg = c.base.none },
+
+          -- Float and popup transparency
+          FloatBorder = { bg = c.base.none },
+          Pmenu = { bg = c.base.none },
+          PmenuSel = { bg = c.base.dimmed2 }, -- Keep some background for selection
+          PmenuSbar = { bg = c.base.none },
+          PmenuThumb = { bg = c.base.dimmed2 },
+
+          -- Neo-tree / Explorer transparency
+          NeoTreeNormal = { bg = c.base.none },
+          NeoTreeNormalNC = { bg = c.base.none },
+          NeoTreeEndOfBuffer = { bg = c.base.none },
+          NeoTreeWinSeparator = { bg = c.base.none },
+
+          -- Nvim-tree transparency (alternative file explorer)
+          NvimTreeNormal = { bg = c.base.none },
+          NvimTreeNormalNC = { bg = c.base.none },
+          NvimTreeEndOfBuffer = { bg = c.base.none },
+          NvimTreeWinSeparator = { bg = c.base.none },
+
+          -- Which-key transparency (for leader key menu)
+          WhichKey = { bg = c.base.none },
+          WhichKeyFloat = { bg = c.base.none },
+          WhichKeyBorder = { bg = c.base.none },
+          WhichKeyGroup = { bg = c.base.none },
+          WhichKeyDesc = { bg = c.base.none },
+          WhichKeySeperator = { bg = c.base.none },
+          WhichKeySeparator = { bg = c.base.none },
+          WhichKeyValue = { bg = c.base.none },
+
+          -- LazyVim/Snacks menu transparency
+          SnacksNotifierInfo = { bg = c.base.none },
+          SnacksNotifierWarn = { bg = c.base.none },
+          SnacksNotifierError = { bg = c.base.none },
+          SnacksNotifierDebug = { bg = c.base.none },
+          SnacksNotifierTrace = { bg = c.base.none },
+
+          -- Visual selection (keep some background for visibility)
+          Visual = { bg = c.base.dimmed2 },
+          VisualNOS = { bg = c.base.dimmed2 },
+
+          -- Search highlighting (keep some background)
+          Search = { bg = c.base.dimmed2, fg = c.base.yellow },
+          IncSearch = { bg = c.base.yellow, fg = c.base.black },
+
+          -- Tabline transparency
+          TabLine = { bg = c.base.none },
+          TabLineFill = { bg = c.base.none },
+          TabLineSel = { bg = c.base.none },
+        }
+      end,
+    })
+    -- Set as default colorscheme (ADD THIS LINE)
+    vim.cmd.colorscheme("monokai-pro")
+  end,
+}
