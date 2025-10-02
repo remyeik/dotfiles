@@ -5,7 +5,16 @@
 	// - "system": Use the theme that corresponds to the system's appearance
 	// - "light": Use the theme indicated by the "light" field
 	// - "dark": Use the theme indicated by the "dark" field
-	"theme": {
+	"context_servers": {
+  "mcp-server-context7": {
+   "source": "extension",
+   "enabled": true,
+   "settings": {
+    "context7_api_key": "ctx7sk-97145821-4227-4822-ac13-31801c52f69c"
+   }
+  }
+ },
+ "theme": {
 		"mode": "system",
 		"light": "One Light",
 		"dark": "One Dark"
