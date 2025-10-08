@@ -49,7 +49,7 @@
 	// The default font size for text in the editor
 	"buffer_font_size": 14,
 	// The weight of the editor font in standard CSS units from 100 to 900.
-	"buffer_font_weight": 500,
+	"buffer_font_weight": 600,
 	// Set the buffer's line height.
 	// May take 3 values:
 	//  1. Use a line height that's comfortable for reading (1.618)
@@ -73,7 +73,7 @@
 		"calt": false
 	},
 	// The weight of the UI font in standard CSS units from 100 to 900.
-	"ui_font_weight": 400,
+	"ui_font_weight": 600,
 	// The default font size for text in the UI
 	"ui_font_size": 15,
 	// How much to fade out unused code.
