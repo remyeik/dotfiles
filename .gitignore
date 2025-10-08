@@ -1,6 +1,9 @@
 # Ignore these folders
 btop/
+Battle.net/
+brew/
 configstore/
+fzf-tab/
 gh/
 github-copilot/
 gtk-3.0/
@@ -9,4 +12,3 @@ raycast/
 vivaldi/
 zed/prompts/
 brew
-

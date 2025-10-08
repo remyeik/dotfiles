@@ -6,53 +6,18 @@
 	// - "light": Use the theme indicated by the "light" field
 	// - "dark": Use the theme indicated by the "dark" field
 	"context_servers": {
-  "mcp-server-context7": {
-   "source": "extension",
-   "enabled": true,
-   "settings": {
-    "context7_api_key": "ctx7sk-97145821-4227-4822-ac13-31801c52f69c"
-   }
-  }
- },
- "theme": {
-		"mode": "system",
-		"light": "One Light",
-		"dark": "One Dark"
+		"mcp-server-context7": {
+			"source": "extension",
+			"enabled": true,
+			"settings": {
+				"context7_api_key": "ctx7sk-97145821-4227-4822-ac13-31801c52f69c"
+			}
+		}
 	},
-	"experimental.theme_overrides": {
-		"renamed.background": "#FFFFFF28",
-		"search.match_background": "#FFFFFF28",
-		"ghost_element.background": "#00000000",
-		"ghost_element.hover": "#1A1A1A10",
-		"background.appearance": "blurred",
-		"background": "#1A1A1ACC",
-		"editor.background": "#1A1A1A10",
-		"editor.gutter.background": "#1A1A1A10",
-		"title_bar.background": "#1A1A1ADF",
-		"toolbar.background": "#1A1A1A10",
-		"terminal.background": "#00000000",
-		"status_bar.background": "#1A1A1ADF",
-		"tab.active_background": "#1A1A1A10",
-		"tab.inactive_background": "#00000000",
-		"tab_bar.background": "#1A1A1A10",
-		"panel.background": "#1A1A1A00",
-		"border": "#00000000",
-		"border.variant": "#00000000",
-		"scrollbar.track.border": "#00000000",
-		"scrollbar.track.background": "#00000000",
-		"scrollbar.thumb.background": "#00000000",
-		"scrollbar.thumb.hover.background": "#1A1A1A10",
-		"scrollbar.thumb.active.background": "#1A1A1A18",
-		"scrollbar.thumb.border": "#FFFFFFA0",
-		"editor.selection.background": "#00000000",
-		"editor.selection.foreground": "#00000000",
-		"editor.selection.border": "#00000000",
-		"editor.selection.inactive.foreground": "#00000000",
-		"editor.selection.inactive.border": "#00000000",
-		"editor.selection.active.background": "#00000000",
-		"editor.selection.active.foreground": "#1A1A1A00",
-		"editor.selection.active.border": "#00000000",
-		"editor.selection.inactive.background": "#00000000"
+	"theme": {
+		"mode": "dark",
+		"light": "One Light",
+		"dark": "antidawn"
 	},
 
 	// The name of a base set of key bindings to use.
