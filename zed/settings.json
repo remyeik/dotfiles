@@ -441,7 +441,7 @@
 			// The provider to use.
 			"provider": "copilot_chat",
 			// The model to use.
-			"model": "gpt-5"
+			"model": "claude-sonnet-4.5"
 		}
 	},
 	// The settings for slash commands.
