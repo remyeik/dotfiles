@@ -1,14 +1,14 @@
-# Ignore these folders
-btop/
+# Add to .gitignore
 Battle.net/
 brew/
+btop/
 configstore/
 fzf-tab/
 gh/
+ghosttyvim.sh
 github-copilot/
 gtk-3.0/
-jj/
+opencode/
 raycast/
-vivaldi/
-zed/prompts/
-brew
+zed/*
+!zed/themes/
