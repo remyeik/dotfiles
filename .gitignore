@@ -12,3 +12,5 @@ opencode/
 raycast/
 zed/*
 !zed/themes/
+brew
+ghosstyvim.sh
