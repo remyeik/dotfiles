@@ -12,5 +12,6 @@ opencode/
 raycast/
 zed/*
 !zed/themes/
+!zed/settings.json
 brew
 ghosstyvim.sh
