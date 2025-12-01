@@ -34,7 +34,7 @@
 	// Features that can be globally enabled or disabled
 	"features": {
 		// Which inline completion provider to use.
-		"edit_prediction_provider": "none"
+		"edit_prediction_provider": "zed"
 	},
 	// The name of a font to use for rendering text in the editor
 	"buffer_font_family": "Maple Mono NF",
@@ -597,7 +597,7 @@
 	"load_direnv": "shell_hook",
 	"edit_predictions": {
 		// A list of globs representing files that inline completions should be disabled for.
-		"mode": "subtle",
+		"mode": "eager",
 		"disabled_globs": [".env"]
 	},
 	// Settings specific to journaling
