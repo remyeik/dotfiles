@@ -184,6 +184,10 @@
 	// bracket, brace, single or double quote characters.
 	// For example, when you select text and type (, Zed will surround the text with ().
 	"use_auto_surround": true,
+	// Whether to automatically colorize brackets when typing
+	// opening parenthesis, bracket, brace, single or double quote characters.
+	// For example, when you type (, Zed will colorize the brackets.
+	"colorize_brackets": false,
 	// Controls how the editor handles the autoclosed characters.
 	// When set to `false`(default), skipping over and auto-removing of the closing characters
 	// happen only for auto-inserted characters.

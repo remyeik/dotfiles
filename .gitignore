@@ -10,6 +10,7 @@ github-copilot/
 gtk-3.0/
 opencode/
 raycast/
+sketchybar/
 zed/*
 !zed/themes/
 !zed/settings.json
