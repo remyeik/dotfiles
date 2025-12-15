@@ -54,10 +54,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [gaps]
 inner.horizontal = 5
 inner.vertical =   5
-outer.left =       5
-outer.bottom =     5
+outer.left =       8
+outer.bottom =     8
 outer.top =        5
-outer.right =      5
+outer.right =      8
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -79,6 +79,9 @@ outer.right =      5
 
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
+# Floating layout
+alt-shift-space =  ['layout floating tiling', 'mode main']
+
 # You can uncomment this line to open up terminal with alt + enter shortcut
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 alt-enter = 'exec-and-forget open -n /System/Applications/Ghostty.app'
@@ -86,12 +89,6 @@ alt-enter = 'exec-and-forget open -n /System/Applications/Ghostty.app'
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
-
-# Shift focus within Workspace
-ctrl-alt-left = 'focus left'
-ctrl-alt-down = 'focus down'
-ctrl-alt-up = 'focus up'
-ctrl-alt-right = 'focus right'
 
 # Move within Workspace
 alt-shift-left = 'move left'
@@ -103,6 +100,7 @@ alt-shift-right = 'move right'
 alt-shift-minus = 'resize smart -100'
 alt-shift-equal = 'resize smart +100'
 alt-shift-0 = 'fullscreen'
+alt-shift-9 = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
 
 # Switch Workspace
 alt-1 = 'workspace ⚔️'
@@ -110,15 +108,15 @@ alt-2 = 'workspace 💩'
 alt-3 = 'workspace 😻'
 alt-4 = 'workspace 🐶'
 alt-5 = 'workspace ☠️'
-
+alt-6 = 'workspace 👻'
 
 # Move application to Workspace
-alt-shift-1 = 'move-node-to-workspace ⚔️'
-alt-shift-2 = 'move-node-to-workspace 💩'
-alt-shift-3 = 'move-node-to-workspace 😻'
-alt-shift-4 = 'move-node-to-workspace 🐶'
-alt-shift-5 = 'move-node-to-workspace ☠️'
-
+alt-shift-1 = ['move-node-to-workspace ⚔️', 'workspace ⚔️']
+alt-shift-2 = ['move-node-to-workspace 💩', 'workspace 💩']
+alt-shift-3 = ['move-node-to-workspace 😻', 'workspace 😻']
+alt-shift-4 = ['move-node-to-workspace 🐶', 'workspace 🐶']
+alt-shift-5 = ['move-node-to-workspace ☠️', 'workspace ☠️']
+alt-shift-6 = ['move-node-to-workspace 👻', 'workspace 👻']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -126,7 +124,7 @@ alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-alt-shift-semicolon = 'mode service'
+alt-shift-m = 'mode service'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -135,7 +133,6 @@ esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
-backspace = ['close-all-windows-but-current', 'mode main']
 
 alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
