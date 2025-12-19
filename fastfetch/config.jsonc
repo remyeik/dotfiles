@@ -1,59 +1,40 @@
 {
-  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "logo": {
-    "source": "~/.config/fastfetch/peon.png",
-    "type": "none",
-    "position": "top",
-    "width": 20,
-    "height": 10,
-  },
-  "modules": [
-    {
-      "type": "custom",
-      "format": " The Barracks",
-      "outputColor": "green",
-    },
-    {
-      "type": "os",
-      "key": "\uf179 OS",
-      "format": "{sysname} {version}",
-      "keyColor": "green", // = color1
-    },
-    {
-      "type": "terminal",
-      "key": " Terminal",
-      "format": "{pretty-name} {version}",
-      "keyColor": "green",
-    },
-    {
-      "type": "memory",
-      "key": " Memory",
-      "format": "{used} / {total} ({percentage})",
-      "keyColor": "green",
-    },
-    {
-      "type": "disk",
-      "key": " Disk",
-      "format": "{size-used} / {size-total} ({size-percentage})",
-      "keyColor": "green",
-    },
-    {
-      "type": "battery",
-      "key": "󰂊 Battery",
-      "format": "{status} ({capacity}) [{cycle-count}]",
-      "keyColor": "green",
-    },
-    {
-      "type": "media",
-      "key": " Media",
-      "keyColor": "green",
-    },
-    {
-      "type": "datetime",
-      "key": " Time",
-      "format": "{weekday-short}, {day-pretty}.{month-name-short} {year} - {hour-pretty}:{minute-pretty}",
-      "keyColor": "green",
-    },
-    "break",
-  ],
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+		"source": "~/.config/fastfetch/peon.png",
+		"type": "none",
+		"position": "left",
+		"width": 15,
+		"height": 7,
+	},
+	"modules": [
+		{
+			"type": "custom",
+			"format": " The Barracks",
+			"outputColor": "green",
+		},
+		{
+			"type": "custom",
+			"format": "---------------",
+			"outputColor": "green",
+		},
+		{
+			"type": "datetime",
+			"key": " Time",
+			"format": "{weekday-short}, {day-pretty}.{month-name-short} {year} - {hour-pretty}:{minute-pretty}",
+			"keyColor": "green",
+		},
+		{
+			"type": "battery",
+			"key": "󰂊 Battery",
+			"format": "{status} ({capacity}) [{cycle-count}]",
+			"keyColor": "green",
+		},
+		{
+			"type": "media",
+			"key": " Media",
+			"keyColor": "green",
+		},
+		"break",
+	],
 }
