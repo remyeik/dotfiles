@@ -74,18 +74,16 @@ alt-1 = 'workspace ⚔️'
 alt-2 = 'workspace ☠️'
 alt-3 = 'workspace 🧙🏻‍♂️'
 alt-4 = 'workspace 🧛🏻‍♂️'
-alt-5 = 'workspace 🧝🏼‍♂️'
-alt-6 = 'workspace 👻'
-alt-7 = 'workspace 💩'
+alt-5 = 'workspace 👻'
+alt-6 = 'workspace 💩'
 
 # Move application to Workspace
 alt-ctrl-1 = ['move-node-to-workspace ⚔️', 'workspace ⚔️']
 alt-ctrl-2 = ['move-node-to-workspace ☠️', 'workspace ☠️']
 alt-ctrl-3 = ['move-node-to-workspace 🧙🏻‍♂️', 'workspace 🧙🏻‍♂️']
 alt-ctrl-4 = ['move-node-to-workspace 🧛🏻‍♂️', 'workspace 🧛🏻‍♂️']
-alt-ctrl-5 = ['move-node-to-workspace 🧝🏼‍♂️', 'workspace 🧝🏼‍♂️']
-alt-ctrl-6 = ['move-node-to-workspace 👻', 'workspace 👻']
-alt-ctrl-7 = ['move-node-to-workspace 💩', 'workspace 💩']
+alt-ctrl-5 = ['move-node-to-workspace 👻', 'workspace 👻']
+alt-ctrl-6 = ['move-node-to-workspace 💩', 'workspace 💩']
 
 # alt-tab = 'workspace-back-and-forth'
 alt-ctrl-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -115,7 +113,7 @@ if.app-id = 'com.apple.Music'
 run = "move-node-to-workspace ☠️"
 
 [[on-window-detected]]
-if.app-id = 'com.whispersystems.signal-desktop'
+if.app-id = 'com.apple.MobileSMS'
 run = "move-node-to-workspace ☠️"
 
 [[on-window-detected]]
@@ -132,11 +130,11 @@ run = "move-node-to-workspace 🧛🏻‍♂️"
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Teams'
-run = "move-node-to-workspace 👻"
+run = "move-node-to-workspace 💩"
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run = "move-node-to-workspace 👻"
+run = "move-node-to-workspace 💩"
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Outlook'

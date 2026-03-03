@@ -437,7 +437,7 @@
     "default_profile": "ask",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5",
+      "model": "claude-opus-4.6",
     },
     "model_parameters": [],
   },
@@ -618,6 +618,7 @@
   "load_direnv": "shell_hook",
   "edit_predictions": {
     // A list of globs representing files that inline completions should be disabled for.
+    "provider": "copilot",
     "mode": "eager",
     "disabled_globs": [
       ".env"
