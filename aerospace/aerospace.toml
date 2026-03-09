@@ -61,6 +61,13 @@ alt-ctrl-down = 'move down'
 alt-ctrl-up = 'move up'
 alt-ctrl-right = 'move right'
 
+# Move focus in Workspace# Focus (move attention, not the window)
+alt-left = 'focus left'
+alt-down = 'focus down'
+alt-up = 'focus up'
+alt-right = 'focus right'
+
+
 # Resizing
 alt-ctrl-minus = 'resize smart +100'
 alt-ctrl-equal = 'resize smart -100'
