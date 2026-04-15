@@ -18,28 +18,6 @@ vim.keymap.set("v", "<S-Down>", "<Down>", { desc = "Extend selection down" })
 vim.keymap.set("v", "<S-Left>", "<Left>", { desc = "Extend selection left" })
 vim.keymap.set("v", "<S-Right>", "<Right>", { desc = "Extend selection right" })
 
--- Alt + arrows for word navigation
-vim.keymap.set("n", "<A-f>", "w", { desc = "Jump word right" })
-vim.keymap.set("i", "<A-f>", "<Esc>wi", { desc = "Jump word right" })
-vim.keymap.set("v", "<A-f>", "w", { desc = "Jump word right" })
-vim.keymap.set("n", "<C-Left>", "^", { desc = "Jump to beginning of line" })
-vim.keymap.set("n", "<C-Right>", "$", { desc = "Jump to end of line" })
-vim.keymap.set("i", "<C-Left>", "<Esc>^i", { desc = "Jump to beginning of line" })
-vim.keymap.set("i", "<C-Right>", "<Esc>$a", { desc = "Jump to end of line" })
-vim.keymap.set("v", "<C-Left>", "^", { desc = "Jump to beginning of line" })
-vim.keymap.set("v", "<C-Right>", "$", { desc = "Jump to end of line" })
-
--- Alt/Option + arrows for line navigation (custom behavior)
--- Move to beginning of line with Alt + Up
-vim.keymap.set("n", "<A-Up>", "^", { desc = "Jump to beginning of line" })
-vim.keymap.set("i", "<A-Up>", "<Esc>^i", { desc = "Jump to beginning of line" })
-vim.keymap.set("v", "<A-Up>", "^", { desc = "Jump to beginning of line" })
-
--- Move to end of line with Alt + Down
-vim.keymap.set("n", "<A-Down>", "$", { desc = "Jump to end of line" })
-vim.keymap.set("i", "<A-Down>", "<Esc>$a", { desc = "Jump to end of line" })
-vim.keymap.set("v", "<A-Down>", "$", { desc = "Jump to end of line" })
-
 -- Ctrl+h and Ctrl+l for beginning and end of line
 vim.keymap.set("n", "<C-h>", "^", { desc = "Jump to beginning of line" })
 vim.keymap.set("n", "<C-l>", "$", { desc = "Jump to end of line" })
@@ -49,7 +27,7 @@ vim.keymap.set("v", "<C-l>", "$", { desc = "Jump to end of line" })
 -- <leader>fp for opening the Projects pane
 vim.keymap.set("n", "<leader>fp", ":lua Snacks.dashboard.pick('projects')<CR>", { desc = "Projects pane" })
 
--- Cmd+a for select all
+-- Ctrk + a for select all
 vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select all", noremap = true })
 
 -- Better paste handling - removing the black hole register when pasting.
