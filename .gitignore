@@ -12,6 +12,7 @@ gtk-3.0/
 opencode/
 raycast/
 sketchybar/
+thefuck/
 zed/*
 !zed/themes/
 !zed/settings.json
