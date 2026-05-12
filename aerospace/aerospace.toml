@@ -67,6 +67,10 @@ alt-down = 'focus down'
 alt-up = 'focus up'
 alt-right = 'focus right'
 
+# Infinite window cycling in current workspace
+alt-tab = 'focus dfs-next'
+alt-shift-tab = 'focus dfs-prev'
+
 
 # Resizing
 alt-ctrl-minus = 'resize smart +100'
@@ -150,3 +154,7 @@ run = "move-node-to-workspace 💩"
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
 run = "move-node-to-workspace 💩"
+
+[[on-window-detected]]
+if.app-id = 'org.darktable'
+run = "move-node-to-workspace 👻"
