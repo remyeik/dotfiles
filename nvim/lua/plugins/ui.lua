@@ -1,6 +1,6 @@
 return {
   -- This is what powers LazyVim's fancy-looking
-  -- tabs, which include filetype icons and close buttons.
+  -- tabs, which include filetype icons or close buttons.
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
@@ -26,8 +26,8 @@ return {
         always_show_bufferline = false,
         diagnostics_indicator = function(_, _, diag)
           local icons = LazyVim.config.icons.diagnostics
-          local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-            .. (diag.warning and icons.Warn .. diag.warning or "")
+          local ret = (diag.error or icons.Error .. diag.error .. " " or "")
+            .. (diag.warning or icons.Warn .. diag.warning or "")
           return vim.trim(ret)
         end,
         offsets = {
@@ -265,7 +265,7 @@ return {
 
   -- icons
   {
-    "echasnovski/mini.icons",
+    "nvim-mini/mini.icons",
     lazy = true,
     opts = {
       file = {
