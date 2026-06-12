@@ -5,7 +5,12 @@
 	// - "system": Use the theme that corresponds to the system's appearance
 	// - "light": Use the theme indicated by the "light" field
 	// - "dark": Use the theme indicated by the "dark" field
-	"git_panel": {
+	"agent_servers": {
+  "mistral-vibe": {
+   "type": "registry"
+  }
+ },
+ "git_panel": {
 		"dock": "right",
 	},
 	"context_servers": {
