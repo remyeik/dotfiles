@@ -52,10 +52,19 @@
         },
         {
           "type": "git",
-          "style": "plain",
-          "template": "{{ if gt (add .Working.Changed .Staging.Changed) 0 }} {{ else }}{{ end }}",
-
-          "foreground": "p:green_icons",
+          "style": "powerline",
+          "template": "{{ if gt (add .Working.Changed .Staging.Changed) 0 }}{{ end }}",
+          "foreground": "#ff6347",
+          "properties": {
+            "fetch_status": true,
+            "display": "bold"
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "template": "{{ if eq (add .Working.Changed .Staging.Changed) 0 }}{{ end }}",
+          "foreground": "#98C379",
           "properties": {
             "fetch_status": true,
             "display": "bold"
