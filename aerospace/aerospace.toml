@@ -120,6 +120,10 @@ if.app-id = 'com.vivaldi.Vivaldi'
 run = "move-node-to-workspace ⚔️"
 
 [[on-window-detected]]
+if.app-id = 'net.imput.helium'
+run = "move-node-to-workspace ⚔️"
+
+[[on-window-detected]]
 if.app-id = 'com.qobuz.desktop'
 run = "move-node-to-workspace ☠️"
 
